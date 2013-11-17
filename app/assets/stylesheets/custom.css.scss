@@ -1,0 +1,46 @@
+@import "bootstrap";
+@import "bootstrap-glyphicons";
+@import "cal-heatmap";
+
+/* Universal */
+
+/*html {
+  overflow-y: scroll;
+}*/
+
+.navbar-inner{
+	background: linear-gradient(to top, $grayLight, white);
+}
+
+body {
+  padding-top: 60px;
+  background-color: gray;
+}
+
+.center {
+  text-align: center;
+	/*h1 {
+  margin-bottom: 10px;
+	}*/
+}
+
+.panel-contents{
+	padding: 10px 10px;
+	color: $grayLight;
+	h4 {
+  margin: 0px 0px 5px;
+	}
+}
+
+.main-panel, .x-panel{
+	border: solid $grayLight 2px;
+	margin: 1px;
+	height: 250px;
+}
+
+.main-panel{
+	background: gray;
+}
+
+.x-panel{
+}

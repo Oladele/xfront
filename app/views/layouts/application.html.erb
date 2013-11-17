@@ -3,12 +3,32 @@
 <head>
   <title>Xfront</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
+	<header class="navbar navbar-fixed-top navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<%= link_to "Xtronger", '#', class: "brand" %>
+				<nav>
+					<ul class="nav pull-right">
+						<li><%= link_to "Home", '#' %></li>
+						<li><%= link_to "Help", '#' %></li>
+						<li><%= link_to "Sign in/out", '#' %></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
 
-<%= yield %>
+	<div class="container">
+		<%= yield %>
+	</div>
 
 </body>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </html>
