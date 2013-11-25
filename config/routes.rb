@@ -1,6 +1,7 @@
 Xfront::Application.routes.draw do
+  get "sample_data/heatMapWorkouts"
   get "mockups/dashboard"
-  get "static_pages/dashboard"
+  get "mockups/jsonData"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

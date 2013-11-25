@@ -10,12 +10,12 @@
   <![endif]-->
 </head>
 <body>
-	<header class="navbar navbar-fixed-top navbar">
+	<header class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<%= link_to "Xtronger", '#', class: "brand" %>
+				<%= link_to "Xtronger", '#', class: "navbar-brand" %>
 				<nav>
-					<ul class="nav pull-right">
+					<ul class="nav nav-pills pull-right">
 						<li><%= link_to "Home", '#' %></li>
 						<li><%= link_to "Help", '#' %></li>
 						<li><%= link_to "Sign in/out", '#' %></li>
@@ -30,5 +30,5 @@
 	</div>
 
 </body>
-<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "application-#{params[:controller]}", "data-turbolinks-track" => true %>
 </html>

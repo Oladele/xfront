@@ -14,6 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-//= require d3
-//= require cal-heatmap
-//= require_tree .
+//= require moment
+//= require sample_data_util
+//= require sample_data

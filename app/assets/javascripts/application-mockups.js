@@ -16,4 +16,4 @@
 //= require bootstrap
 //= require d3
 //= require cal-heatmap
-//= require_tree .
+//= require mockups
