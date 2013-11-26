@@ -8,32 +8,38 @@
   overflow-y: scroll;
 }*/
 
-$colorLow: white;
-$colorMedium: $gray-light;
-$colorHigh: $gray;
-$colorHigher: $gray-dark;
+/*Canvas Colors*/
+$canvasMedium: $gray-light;
+$canvasHigh: $gray;
+$canvasHigher: $gray-dark;
 
+/*Content Colors */
+$colorLow: #9CB58D;
+$colorHigh: #7AE339;
+$colorMedium: mix($colorHigh,$colorLow, 50%);
 $colorMixHighLow25: mix($colorHigh,$colorLow, 25%);
 $colorMixHighLow50: mix($colorHigh,$colorLow, 50%);
 $colorMixHighLow75: mix($colorHigh,$colorLow, 75%);
 
+
+
 $hmSubDomain: rgba(0,0,0,0);
 
 .navbar-inner{
-	background: linear-gradient(to top, $colorHigher, $colorHigh);
+	background: linear-gradient(to top, $canvasHigher, $canvasHigh);
 	a{
 		color: $colorMedium;
-/*		text-shadow: $colorMedium 2px 2px;*/
+		font-weight: bold;
 	}
 	&.navbar-mini{
-	background: linear-gradient(to bottom right, $colorMedium, $colorHigher);
+	background: linear-gradient(to bottom right, $canvasMedium, $canvasHigher);
 	}
 }
 
 body {
   padding-top: 60px;
   /*background-color: gray;*/
-  background: linear-gradient(to right, $colorHigher , $colorHigh 50%, $colorHigher);
+  background: linear-gradient(to right, $canvasHigher , $canvasHigh 50%, $canvasHigher);
 }
 
 .center {
@@ -52,7 +58,7 @@ body {
 }
 
 .x-panel{
-	border: solid $colorHigh 2px;
+	border: solid $canvasHigh 2px;
 	height: 400px;
 	padding: 0px;
 	text-align: center;
@@ -101,6 +107,8 @@ button{
 	width: 90%;
 	padding: 2px 5px;
 	font-size: 16px;
+	font-weight: bold;
+	color: $canvasHigh;
 	&.x0{
 		background-color: $colorLow;
 	}
