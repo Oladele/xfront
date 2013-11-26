@@ -17,13 +17,48 @@ $canvasHigher: $gray-dark;
 $colorLow: #9CB58D;
 $colorHigh: #7AE339;
 $colorMedium: mix($colorHigh,$colorLow, 50%);
-$colorMixHighLow25: mix($colorHigh,$colorLow, 25%);
-$colorMixHighLow50: mix($colorHigh,$colorLow, 50%);
-$colorMixHighLow75: mix($colorHigh,$colorLow, 75%);
 
-
+$colorMix0: $colorLow;
+$colorMix25: mix($colorHigh,$colorLow, 25%);
+$colorMix50: mix($colorHigh,$colorLow, 50%);
+$colorMix75: mix($colorHigh,$colorLow, 75%);
+$colorMix100: $colorHigh;
 
 $hmSubDomain: rgba(0,0,0,0);
+
+/* background fill colors */
+.bgColorMix0{
+	background-color: $colorMix0;
+}
+.bgColorMix25{
+	background-color: $colorMix25;
+}
+.bgColorMix50{
+	background-color: $colorMix50;
+}
+.bgColorMix75{
+	background-color: $colorMix75;
+}
+.bgColorMix100{
+	background-color: $colorMix100;
+}
+
+/* text fill colors */
+.txColorMix0{
+	color: $colorMix0;
+}
+.txColorMix25{
+	color: $colorMix25;
+}
+.txColorMix50{
+	color: $colorMix50;
+}
+.txColorMix75{
+	color: $colorMix75;
+}
+.txColorMix100{
+	color: $colorMix100;
+}
 
 .navbar-inner{
 	background: linear-gradient(to top, $canvasHigher, $canvasHigh);
@@ -45,6 +80,8 @@ body {
 .center {
   text-align: center;
 }
+
+/*Xtronger Themes*/
 
 .panel-contents{
 	padding: 10px;
@@ -101,30 +138,50 @@ button{
 	}
 }
 
-
 .x-item{
 	margin: 10px;
 	width: 90%;
-	padding: 2px 5px;
+	padding: 0px 0px;
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: normal;
 	color: $canvasHigh;
-	&.x0{
-		background-color: $colorLow;
+	background-color: $canvasHigher;
+	-webkit-border-top-left-radius: 5px;
+	border-radius-topleft: 5px;
+	overflow: hidden;
+}
+
+.x-item-contents{
+	float: left;
+	display: inline;
+}
+
+.x-item-date{
+	width: 70px;
+	/*background: #ffffff;*/
+	margin-right: 3px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+
+	border-radius-topleft: 5px;
+	border-radius-bottomright: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	.date{
+	font-weight: normal;
+	font-style: italic;
+	font-size: 10px;
 	}
-	&.x25{
-		background-color: $colorMixHighLow25;
-	}
-	&.x50{
-		background-color: $colorMixHighLow50;
-	}
-	&.x75{
-		background-color: $colorMixHighLow75;
-	}
-	&.x100{
-		background-color: $colorHigh;
+	.day{
+	font-weight: normal;
+	font-size: 14px;
 	}
 }
+
+
+
+
+
 
 /* heatMap */
 
@@ -136,13 +193,13 @@ button{
 		fill: $colorLow;
 	}
 	.q2{
-		fill: $colorMixHighLow25;
+		fill: $colorMix25;
 	}
 	.q3{
-		fill: $colorMixHighLow50;
+		fill: $colorMix50;
 	}
 	.q4{
-		fill: $colorMixHighLow75;
+		fill: $colorMix75;
 	}
 	.q5{
 		fill: $colorHigh;
