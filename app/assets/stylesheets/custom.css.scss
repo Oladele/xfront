@@ -149,22 +149,26 @@ button{
 	overflow: hidden;
 }
 
-.x-item-contents{
-	float: left;
+.x-item-contents{                                
+	float: left;                  
 	display: inline;
-}
+}                                          
 
+.x-item-contents-fullwidth{
+	@extend .x-item-contents;
+	width: 100%;
+	text-align: left;
+}
 .x-item-date{
 	width: 70px;
-	/*background: #ffffff;*/
 	margin-right: 3px;
 	-webkit-border-top-left-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
 
 	border-radius-topleft: 5px;
-	border-radius-bottomright: 5px;
+	border-radius-bottomleft: 5px;
 	border-top-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 	.date{
 	font-weight: normal;
 	font-style: italic;
@@ -233,19 +237,21 @@ min-height: 0;
 .ui-state-default{
 	background: $canvasHigher;
 	border: none;
-	padding: 0;
+	/*padding: 0;*/
 }
 
 .ui-state-active{
 	background: $canvasHigher;
 	border: none;
-	padding: 0;
+	/*padding: 0;*/
 }
 
 .ui-accordion .ui-accordion-content{
 	overflow: hidden;
 	border:none;
 	margin: 0px;
+	padding:5px 5px;
+	display: block;
 }
 
 .ui-widget-content {

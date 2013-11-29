@@ -4,6 +4,7 @@
 
 $( "#accordion" ).accordion({
   collapsible: true,
+  heightStyle: "content",
   icons: null
 })
 
