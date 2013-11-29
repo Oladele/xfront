@@ -27,11 +27,12 @@
 			</div>
 		</div>
 	</header>
-
 	<div class="container">
+		<!-- backbone anchor -->
+		<div id="content"></div>
+		<!-- backbone anchor -->
 		<%= yield %>
 	</div>
-<%= debug(params) if Rails.env.development? %>
 </body>
 <% if params[:controller] != "application" %>
 <%= javascript_include_tag "application-#{params[:controller]}", "data-turbolinks-track" => true %>

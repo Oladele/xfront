@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require handlebars.runtime
 //= require underscore
 //= require backbone
 //= require ./app/xfront
