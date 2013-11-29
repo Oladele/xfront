@@ -11,9 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require bootstrap
-//= require d3
-//= require cal-heatmap
-//= require_tree .
+//= require underscore
+//= require backbone
+//= require ./app/xfront
