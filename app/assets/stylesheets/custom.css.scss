@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "bootstrap-glyphicons";
 @import "cal-heatmap";
+@import "jquery-ui";
 
 /* Universal */
 
@@ -139,15 +140,12 @@ button{
 }
 
 .x-item{
-	margin: 10px;
-	width: 90%;
+	margin: 0px 0px;
+	width: 100%;
 	padding: 0px 0px;
 	font-size: 16px;
 	font-weight: normal;
 	color: $canvasHigh;
-	background-color: $canvasHigher;
-	-webkit-border-top-left-radius: 5px;
-	border-radius-topleft: 5px;
 	overflow: hidden;
 }
 
@@ -219,4 +217,37 @@ button{
 
 .achievement{
 	color: $colorLow;
+}
+
+/*Jquery-ui customizations - Accordion */
+
+.ui-accordion .ui-accordion-header {
+display: block;
+cursor: pointer;
+position: relative;
+margin-top: 2px;
+padding: .2em .2em .2em .2em;
+min-height: 0;
+}
+
+.ui-state-default{
+	background: $canvasHigher;
+	border: none;
+	padding: 0;
+}
+
+.ui-state-active{
+	background: $canvasHigher;
+	border: none;
+	padding: 0;
+}
+
+.ui-accordion .ui-accordion-content{
+	overflow: hidden;
+	border:none;
+	margin: 0px;
+}
+
+.ui-widget-content {
+	background: $canvasHigher;
 }
