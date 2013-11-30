@@ -1,5 +1,6 @@
 Xfront::Application.routes.draw do
   root to: "application#index"
+  resources :workouts
   get "sample_data/heatMapWorkouts"
   get "mockups/dashboard"
   get "mockups/jsonData"
