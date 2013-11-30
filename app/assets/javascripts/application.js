@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
+//= require moment
 //= require handlebars.runtime
 //= require underscore
 //= require backbone

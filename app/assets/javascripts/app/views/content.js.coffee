@@ -16,6 +16,6 @@ class App.Views.Content extends Backbone.View
 		@
 
 	renderWorkoutsView: ->
-		v = new App.Views.Workouts()
+		v = new App.Views.Workouts({ collection: new App.Collections.Workouts })
 		@$('#right-area').html(v.render().el)
 		@
