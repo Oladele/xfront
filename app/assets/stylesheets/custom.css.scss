@@ -10,6 +10,8 @@
 }*/
 
 /*Canvas Colors*/
+$canvasSeeThru00: rgba(0,0,0,0);
+$canvasSeeThru01: rgba(0,0,0,0.1);
 $canvasMedium: $gray-light;
 $canvasHigh: $gray;
 $canvasHigher: $gray-dark;
@@ -25,7 +27,7 @@ $colorMix50: mix($colorHigh,$colorLow, 50%);
 $colorMix75: mix($colorHigh,$colorLow, 75%);
 $colorMix100: $colorHigh;
 
-$hmSubDomain: rgba(0,0,0,0);
+$hmSubDomain: $canvasSeeThru00;
 
 /* background fill colors */
 .bgColorMix0{
@@ -70,6 +72,9 @@ $hmSubDomain: rgba(0,0,0,0);
 	&.navbar-mini{
 	background: linear-gradient(to bottom right, $canvasMedium, $canvasHigher);
 	}
+	&.navbar-micro{
+	background: $canvasSeeThru01;
+	}
 }
 
 body {
@@ -94,6 +99,7 @@ body {
 	color: $colorMedium;
 	margin: auto;
   width: 90%;
+  /*height: inherit;*/
   overflow-x: hidden;
 	h4 {
 	display: inline;
@@ -106,24 +112,9 @@ body {
 	padding: 0px;
 	text-align: center;
 	display: block;
+	overflow-y: hidden;
 	&.single-line{
 		line-height: 350px;
-	}
-	&.overflow-y{
-		overflow-y: scroll;
-		&::-webkit-scrollbar {
-		    width: 12px;
-		}
-		 
-		&::-webkit-scrollbar-track {
-		    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-		    border-radius: 10px;
-		}
-		 
-		&::-webkit-scrollbar-thumb {
-		    border-radius: 10px;
-		    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-		}
 	}
 	&.slim{
 		height: 200px;
@@ -133,11 +124,36 @@ body {
 	}
 }
 
+.x-panel-heading{
+	height: 40px
+}
+
+.x-panel-contents{
+	height: 360px
+}
+
+.overflow-y{
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+	    width: 12px;
+	}
+	 
+	&::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	    border-radius: 10px;
+	}
+	 
+	&::-webkit-scrollbar-thumb {
+	    border-radius: 10px;
+	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	}
+}
+
 button{
 	background: none;
 	border: none;
 	color: $colorMedium;
-	font-size: 10px;
+	font-size: 12px;
 	margin: auto;
 	&.jumbo{
 		font-size: 60px;
@@ -164,6 +180,7 @@ button{
 	width: 100%;
 	text-align: left;
 }
+
 .x-item-date{
 	width: 70px;
 	margin-right: 3px;
@@ -185,9 +202,20 @@ button{
 	}
 }
 
+/* Achievements */
 
+.achievement-feed{
+	text-align: left;
+}
 
+.user-name{
+	font-weight: bold;
+	color: $colorLow;
+}
 
+.achievement{
+	color: $colorLow;
+}
 
 
 /* heatMap */
@@ -213,20 +241,6 @@ button{
 	}
 }
 
-/* Achievements */
-
-.achievement-feed{
-	text-align: left;
-}
-
-.user-name{
-	font-weight: bold;
-	color: $colorLow;
-}
-
-.achievement{
-	color: $colorLow;
-}
 
 /*Jquery-ui customizations - Accordion */
 
