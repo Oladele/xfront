@@ -46,7 +46,18 @@ $hmSubDomain: $canvasSeeThru00;
 	background-color: $colorMix100;
 }
 
-/* text fill colors */
+/* background neutral fill colors */
+.bgColorCanvasMedium{
+	background-color: $canvasMedium;
+}
+.bgColorCanvasHigh{
+	background-color: $canvasHigh;
+}
+.bgColorCanvasHigher{
+	background-color: $canvasHigher;
+}
+
+/* text positive fill colors */
 .txColorMix0{
 	color: $colorMix0;
 }
@@ -61,6 +72,18 @@ $hmSubDomain: $canvasSeeThru00;
 }
 .txColorMix100{
 	color: $colorMix100;
+}
+
+/* text neutral-canvas fill colors */
+
+.txColorCanvasMedium{
+	color: $canvasMedium;
+}
+.txColorCanvasHigh{
+	color: $canvasHigh;
+}
+.txColorCanvasHiger{
+	color: $canvasHigher;
 }
 
 .navbar-inner{

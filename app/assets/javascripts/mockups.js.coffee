@@ -5,8 +5,26 @@
 $( "#accordion" ).accordion({
   collapsible: true,
   heightStyle: "content",
+  active: false,
   icons: null
 })
+
+runEffect = ->
+	options = {direction: 'up'}
+	# $('#effect').show('scale', options, 500, callback)
+	$('#effect').show('slide', options, 500)
+
+# callback = ->
+#   setTimeout (->
+#     $("#effect:visible").removeAttr("style").fadeOut()
+#     ), 1000
+
+$('#new-workout').click(->
+	runEffect()
+	return false
+	)
+
+$('#effect').hide()
 
 today = new Date()
 calStartDate = new Date(today.getUTCFullYear(), today.getUTCMonth()-4)
