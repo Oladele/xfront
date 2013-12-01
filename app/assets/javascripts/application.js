@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require csrf_hack
 //= require jquery-ui
 //= require moment
 //= require handlebars.runtime

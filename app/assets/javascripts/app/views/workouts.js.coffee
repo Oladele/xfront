@@ -7,7 +7,6 @@ class App.Views.Workouts extends Backbone.View
 		"click button#save-workout": "saveWorkout"
 
 	newWorkout: ->
-		# console.log 'you clicked me'
 		$('#effect').show('slide',{direction:'up'}, 500)
 		@model = new App.Models.Workout
 
@@ -15,7 +14,6 @@ class App.Views.Workouts extends Backbone.View
 		e.preventDefault()
 		@model.set name: @$('#name').val()
 		@model.set time: @$('#date').val()
-		console.log @model.toJSON()
 		@model.save()
 		$('#effect').hide('slide',{direction:'down'}, 500)
 
@@ -43,7 +41,7 @@ class App.Views.Workouts extends Backbone.View
 		$( "#datepicker" ).datepicker({
 			dateFormat: "d.m.D",
 			altField: "#date",
-			altFormat: "yy-mm-ddT00:00:00.000Z"
+			altFormat: "yy-mm-ddT12:00:00.000Z"
 		})
 		$('#effect').hide()
 		@
