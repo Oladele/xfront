@@ -6,9 +6,10 @@ class App.Views.Workouts extends Backbone.View
 		"click button#new-workout": "newWorkout"
 		"click button#save-workout": "saveWorkout"
 
+
 	newWorkout: ->
 		$('#effect').show('slide',{direction:'up'}, 500)
-		@model = new App.Models.Workout
+		# @model = new App.Models.Workout
 
 	saveWorkout: (e) ->
 		e.preventDefault()
@@ -18,8 +19,18 @@ class App.Views.Workouts extends Backbone.View
 		$('#effect').hide('slide',{direction:'down'}, 500)
 
 	initialize: ->
+		@model = new App.Models.Workout
 		@listenTo @collection, "reset", @render
-		@collection.fetch({ reset: true }) 
+		@listenTo @model, "sync", @triggerWorkoutCreate
+		@listenTo App.Vent, "workout:create", @addToCollection
+		@listenTo @collection, "add", @renderWorkout
+		@collection.fetch({ reset: true })
+
+	triggerWorkoutCreate: ->
+		App.Vent.trigger "workout:create", @model
+
+	addToCollection: (model) ->
+		@collection.add model
 
 	render:->
 		@$el.html(@template())
@@ -30,14 +41,7 @@ class App.Views.Workouts extends Backbone.View
 		  heightStyle: "content",
 		  icons: null
 		})
-		# $('#new-workout').click(->
-		# 	$('#effect').show('slide',{direction:'up'}, 500)
-		# 	return false
-		# )
-		# $('#save-workout').click(->
-		# 	$('#effect').hide('slide',{direction:'down'}, 500)
-		# 	return false
-		# 	)
+
 		$( "#datepicker" ).datepicker({
 			dateFormat: "d.m.D",
 			altField: "#date",
