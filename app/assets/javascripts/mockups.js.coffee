@@ -9,20 +9,21 @@ $( "#accordion" ).accordion({
   icons: null
 })
 
-runEffect = ->
-	options = {direction: 'up'}
-	# $('#effect').show('scale', options, 500, callback)
-	$('#effect').show('slide', options, 500)
-
-# callback = ->
-#   setTimeout (->
-#     $("#effect:visible").removeAttr("style").fadeOut()
-#     ), 1000
-
 $('#new-workout').click(->
-	runEffect()
+	$('#effect').show('slide',{direction:'up'}, 500)
 	return false
 	)
+
+$('#save-workout').click(->
+	$('#effect').hide('slide',{direction:'down'}, 500)
+	return false
+	)
+
+$( "#datepicker" ).datepicker({
+	dateFormat: "d.m.D",
+	altField: "#date",
+	altFormat: "yy-mm-ddT00:00:00.000Z"
+})
 
 $('#effect').hide()
 

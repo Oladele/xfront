@@ -15,6 +15,20 @@ class App.Views.Workouts extends Backbone.View
 		  heightStyle: "content",
 		  icons: null
 		})
+		$('#new-workout').click(->
+			$('#effect').show('slide',{direction:'up'}, 500)
+			return false
+		)
+		$('#save-workout').click(->
+			$('#effect').hide('slide',{direction:'down'}, 500)
+			return false
+			)
+		$( "#datepicker" ).datepicker({
+			dateFormat: "d.m.D",
+			altField: "#date",
+			altFormat: "yy-mm-ddT00:00:00.000Z"
+		})
+		$('#effect').hide()
 		@
 
 	renderWorkout: (model) ->

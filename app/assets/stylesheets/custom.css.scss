@@ -214,6 +214,7 @@ button{
 	border-radius-bottomleft: 5px;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
+	overflow-x: hidden;
 	.date{
 	font-weight: normal;
 	font-style: italic;
@@ -224,6 +225,39 @@ button{
 	font-size: 14px;
 	}
 }
+
+/*New Workout Input */
+#name, #datepicker {
+padding: 0px;
+border: none;
+background: rgba(0, 0, 0, 0.02);
+/*z-index: 2;*/
+box-shadow: none;
+overflow-x: hidden;
+color: $canvasMedium;
+}
+
+#datepicker{
+	width: 70px;
+	text-align: center;
+	color: $canvasHigher;
+	&::-webkit-input-placeholder {
+   color: $canvasHigher;
+	}
+}
+
+/*TODO: DEV ONLY*/
+#date{
+	@extend #name;
+	width: 100%;
+	font-size: 10px;
+	color: pink;
+	&::-webkit-input-placeholder {
+   color: pink;
+   font-size: 10px;
+	}
+}
+/*TODO: DEV ONLY*/
 
 /* Achievements */
 
