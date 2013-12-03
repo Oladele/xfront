@@ -23,7 +23,7 @@ class App.Views.Workouts extends Backbone.View
 		@listenTo @collection, "reset", @render
 		@listenTo @model, "sync", @triggerWorkoutCreate
 		@listenTo App.Vent, "workout:create", @addToCollection
-		@listenTo @collection, "add", @renderWorkout
+		@listenTo @collection, "add", @render
 		@collection.fetch({ reset: true })
 
 	triggerWorkoutCreate: ->
@@ -52,5 +52,5 @@ class App.Views.Workouts extends Backbone.View
 
 	renderWorkout: (model) ->
 		v = new App.Views.Workout({ model: model })
-		@$('#accordion').append(v.render().el)
-		@$('#accordion').append("<div>workout details here</div>")
+		@$('#accordion').prepend("<div>"+model.toJSON().name+" details here</div>")
+		@$('#accordion').prepend(v.render().el)

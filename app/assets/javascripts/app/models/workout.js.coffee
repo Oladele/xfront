@@ -1,5 +1,5 @@
 class App.Models.Workout extends Backbone.Model
-	url: "/workouts"
+	urlRoot: "/workouts"
 
 class App.Collections.Workouts extends Backbone.Collection
 	model: App.Models.Workout

@@ -11,6 +11,12 @@ class WorkoutsController < ApplicationController
 		respond_with(workout)
 	end
 
+	def destroy
+		workout = Workout.find(params[:id])
+		workout.destroy
+		respond_with(workout)		
+	end
+
 	private
 
 	def workout_params

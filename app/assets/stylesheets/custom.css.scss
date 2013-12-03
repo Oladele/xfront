@@ -181,6 +181,9 @@ button{
 	&.jumbo{
 		font-size: 60px;
 	}
+	&.small{
+		font-size: 8px;
+	}
 }
 
 .x-item{
@@ -333,4 +336,8 @@ min-height: 0;
 
 .ui-widget-content {
 	background: $canvasHigher;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{
+	font-family: 'Glyphicons Halflings';
 }
