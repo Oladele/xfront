@@ -17,4 +17,5 @@
 //= require handlebars.runtime
 //= require underscore
 //= require backbone
+//= require backbone.modaldialog
 //= require ./app/xfront

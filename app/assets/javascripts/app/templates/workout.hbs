@@ -1,5 +1,5 @@
 <div class="x-item ui-accordion-header ui-helper-reset ui-state-default ui-corner-all">
-	<!-- 
+	
 	<div class="x-item-date x-item-contents bgColorMix0">
 		<span class="date">{{ date }}</span>
 		<span class="day">{{ day }}</span>
@@ -7,26 +7,13 @@
 	<div class="x-item-contents txColorMix0">
 		{{ name }}
 	</div>
-	-->
-	<div class="x-item">
-		<div class="x-item-date x-item-contents bgColorCanvasMedium">
-			<span class="date">
-				<input type="text" name="date" id="datepicker{{id}}" placeholder = {{ date }}.{{ day }}>
-			</span>
-		</div>
-		<!-- <form id="new_workout" action="/workouts" method="post" autocomplete="true"> -->
-			<div class="x-item-contents txColorCanvasMedium">
-				<input type="text" name="name" id="name" placeholder = {{ name }} >
-			</div>
-			<span class="pull-right">
-				<button class="glyphicon glyphicon-save" id="edit-workout">
-				</button>
-			</span>
-			<input type="text" name="date" id="date" placeholder = "Click to enter date">
-		<!-- </form> -->
-	</div>
 	<span class="pull-right">
 		<button class="small glyphicon glyphicon-remove" id="delete-workout">
 		</button>
 	</span>
+	<span class="pull-right">
+		<button class="small glyphicon glyphicon-edit" id="edit-workout">
+		</button>
+	</span>
+
 </div>

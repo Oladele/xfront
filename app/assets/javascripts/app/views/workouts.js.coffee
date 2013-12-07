@@ -23,8 +23,11 @@ class App.Views.Workouts extends Backbone.View
 		@listenTo @collection, "reset", @render
 		@listenTo @model, "sync", @triggerWorkoutCreate
 		@listenTo App.Vent, "workout:create", @addToCollection
+		@listenTo App.Vent, "workout:edit", @editWorkout
 		@listenTo @collection, "add", @render
 		@collection.fetch({ reset: true })
+
+	editWorkout: (model) ->
 
 	triggerWorkoutCreate: ->
 		App.Vent.trigger "workout:create", @model

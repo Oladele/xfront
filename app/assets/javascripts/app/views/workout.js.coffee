@@ -7,6 +7,9 @@ class App.Views.Workout extends Backbone.View
 	
 	events:
 		"click button#delete-workout": "deleteWorkout"
+		"click button#edit-workout": "editWorkout"
+
+	editWorkout: -> App.Vent.trigger "workout:edit", @model
 
 	deleteWorkout: ->
 		return unless confirm ("Are you sure?")
@@ -20,10 +23,4 @@ class App.Views.Workout extends Backbone.View
 		name = modelJSON.name
 		modelJSON_fmtd = { "id": id, "name": name, "date": date, "day": day }
 		@$el.html(@template(modelJSON_fmtd))
-		datepickerSelector = "#datepicker"+id
-		$( "#datepicker" ).datepicker({
-			dateFormat: "d.m.D",
-			altField: "#date",
-			altFormat: "yy-mm-ddT12:00:00.000Z"
-		})
 		@

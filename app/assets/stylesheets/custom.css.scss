@@ -230,7 +230,7 @@ button{
 }
 
 /*New Workout Input */
-#name, #datepicker {
+#name, #nameN, #datepicker, #datepickerN {
 padding: 0px;
 border: none;
 background: rgba(0, 0, 0, 0.02);
@@ -240,7 +240,7 @@ overflow-x: hidden;
 color: $canvasMedium;
 }
 
-#datepicker{
+#datepicker, #datepickerN{
 	width: 70px;
 	text-align: center;
 	color: $canvasHigher;
@@ -250,7 +250,7 @@ color: $canvasMedium;
 }
 
 /*TODO: DEV ONLY*/
-#date{
+#date, #dateN{
 	@extend #name;
 	width: 100%;
 	font-size: 10px;
