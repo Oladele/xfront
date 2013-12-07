@@ -28,6 +28,23 @@ class App.Views.Workouts extends Backbone.View
 		@collection.fetch({ reset: true })
 
 	editWorkout: (model) ->
+		v = new App.Views.EditWorkout({ model: model })
+		v.render().showModal({
+			fadeInDuration:150,
+			fadeOutDuration:150,
+			showCloseButton:false,
+			targetContainer: document.body,
+			slideFromAbove: false,
+			slideFromBelow: false,
+			slideDistance: 150,
+			css:
+    	{
+        "display": "inline-table",
+        "border": "2px solid rgba(255,255,255,.7)",
+        "background-color": "rgba(0,0,0,.7)",
+        "margin": "auto",
+        "left": "50%"
+        }})
 
 	triggerWorkoutCreate: ->
 		App.Vent.trigger "workout:create", @model
